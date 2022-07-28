@@ -33,24 +33,17 @@
 
     $Lisa_Zhou->moveToCart($migliorCane);
     $Lisa_Zhou->moveToCart($bolster);
-    // var_dump($Lisa_Zhou->getCartSum());
 
-        // Credit Balance
-        $Lisa_Zhou->balace = 90;
-        // $Lisa_Zhou->paymentResult($Lisa_Zhou->balace);
-            // if($Lisa_Zhou->paymentResult($Lisa_Zhou->balace) === 'ok') {
-            //     echo "Grazie per aver effettuato l'acquisto";
-            // };
+    // Credit Balance
+    $Lisa_Zhou->balace = 90;
 
-     // Not-Registered User
-     $anonymous = new AnonymousUser();
-     $anonymous->moveToCart($julius_K9);
-    //  var_dump($anonymous->getCartSum());
 
-        // Credit Balance
-        $anonymous->balace = 20;
-        // $anonymous->paymentResult($anonymous->balace);
-            // if($anonymous->paymentResult($anonymous->balace) === 'ok') {
-            //     echo "Grazie per aver effettuato l'acquisto";
-            // };
+    
+    // Not-Registered User
+    $anonymous = new AnonymousUser();
+    $anonymous->moveToCart($julius_K9);
+
+    // Credit Balance
+    $anonymous->balace = 20;
+
 ?>

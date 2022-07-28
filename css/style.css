@@ -54,3 +54,10 @@ img {
     font-weight: 700;
     font-size: 15px;
 }
+
+
+/* File PaymentResult */
+.registered, 
+.anonymous {
+    padding: 20px;
+}
