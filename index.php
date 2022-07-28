@@ -23,16 +23,15 @@
 
 <?php 
     // Products Area
-    require_once __DIR__ . '/classes/Food.php';
-    require_once __DIR__ . '/classes/DogHarness.php';
-    require_once __DIR__ . '/classes/Kennels.php';
+    require_once __DIR__ . '/classes/animal-products/Food.php';
+    require_once __DIR__ . '/classes/animal-products/DogHarness.php';
+    require_once __DIR__ . '/classes/animal-products/Kennels.php';
 
     $allProducts = [];
 
     $migliorCane = new Food('Miglior Cane', 'Media', 35.90);
     $migliorCane->poster = 'img/s_seniorMA_2-5kg.jpg';
     $allProducts[] = $migliorCane;
-    // var_dump($dogFood_MigliorCane);
 
     $julius_K9 = new DogHarness('Julius K-9', 'Medio-Grande', 29.50);
     $julius_K9->poster = 'img/pettorina-julius-k9.png';
@@ -41,6 +40,22 @@
     $bolster = new Kennels('Bolster', 'Piccola', 59.90);
     $bolster->poster = 'img/71VnSdG+rxL._AC_SX425_.jpg';
     $allProducts[] = $bolster;
+
+    // User Area
+    require_once __DIR__ . '/classes/user/AnonymousUser.php';
+    require_once __DIR__ . '/classes/user/RegisteredUser.php';
+
+    $anonymous = new AnonymousUser();
+    $anonymous->moveToCart($julius_K9);
+    var_dump($anonymous->getCartSum());
+
+    $Lisa_Zhou = new RegisteredUser();
+    $Lisa_Zhou->name = 'Lisa Zhou';
+    $Lisa_Zhou->email = 'lisazhou111@email.it';
+    $Lisa_Zhou->moveToCart($migliorCane);
+    $Lisa_Zhou->moveToCart($bolster);
+    var_dump($Lisa_Zhou->getCartSum());
+
 ?>
 
 <!DOCTYPE html>
