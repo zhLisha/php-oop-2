@@ -5,7 +5,7 @@
         public $number;
         public $expiration;
         public $cvv;
-        public $balance = 90;
+        public $balance = 0;
 
         public function __construct($_nameOwner, $_number, $_expiration, $_cvv) {
             $this->nameOwner = $_nameOwner;

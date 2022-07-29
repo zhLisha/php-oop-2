@@ -36,6 +36,7 @@
 
     // Credit Balance
     $creditCardDetails = new CreditCard('Lisa Zhou', 456663458374657, '2/28', 756);
+    $creditCardDetails->balance = 90;
 
 
     

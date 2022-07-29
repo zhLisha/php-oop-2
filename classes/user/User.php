@@ -29,11 +29,9 @@
 
         public function paymentResult($credit) {
             $totalPrice = $this->getCartSum();
-
-            $totalBalance = $credit->balance;
             
             if($credit->balance < $totalPrice) {
-                die('Saldo non disponibile');
+                throw new Exception("Utente: $this->name: Saldo Non disponibile");
             } else {
                 return 'ok';
             }

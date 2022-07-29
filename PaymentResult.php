@@ -19,18 +19,18 @@
         </div>
         <!-- Payment Result -->
         <div class="payment-result">
-            <?php $Lisa_Zhou->paymentResult($creditCardDetails); ?>
-            <?php if($Lisa_Zhou->paymentResult($creditCardDetails) === 'ok') { ?>
-                
-                <?php echo "Grazie per aver effettuato l'acquisto."; ?>
-
-                <!-- Total Payment -->
-                <div class="total-payment">
-                    <span>
-                        Il totale pagato è di: <?php echo $Lisa_Zhou->getCartSum(); ?> &euro;
-                    </span>
-                </div>
-            <?php }; ?>
+            <?php 
+                try {
+                    if($Lisa_Zhou->paymentResult($creditCardDetails) === 'ok') {
+                        echo "Grazie per aver effettuato l'acquisto. <br>
+                        Il totale pagato è di:" ;
+                        echo $Lisa_Zhou->getCartSum() . "<span> &euro; </span>";
+                    }
+                } catch(Exception $e) {
+                    error_log($e->getMessage());
+                    echo 'Qualcosa è andato storto, prova a controllare la carta e riprova.';
+                }
+            ?> 
         </div>
     </div>
 
@@ -41,10 +41,10 @@
         </div>
         <div>
             <?php
-            $anonymous->paymentResult($anonymous->balace);
-                if($anonymous->paymentResult($anonymous->balace) === 'ok') {
-                    echo "Grazie per aver effettuato l'acquisto";
-                };    
+            // $anonymous->paymentResult($anonymous->balace);
+            //     if($anonymous->paymentResult($anonymous->balace) === 'ok') {
+            //         echo "Grazie per aver effettuato l'acquisto";
+            //     };    
             ?>
         </div> -->
 
