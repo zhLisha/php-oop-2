@@ -7,15 +7,15 @@
 
     $allProducts = [];
 
-    $migliorCane = new Food('Miglior Cane', 'Media', 35.90);
+    $migliorCane = new Food('Miglior Cane', 'Media', 35.90, 3746253647657483);
     $migliorCane->poster = 'img/s_seniorMA_2-5kg.jpg';
     $allProducts[] = $migliorCane;
 
-    $julius_K9 = new DogHarness('Julius K-9', 'Medio-Grande', 29.50);
+    $julius_K9 = new DogHarness('Julius K-9', 'Medio-Grande', 29.50, 957584756374657);
     $julius_K9->poster = 'img/pettorina-julius-k9.png';
     $allProducts[] = $julius_K9;
 
-    $bolster = new Kennels('Bolster', 'Piccola', 59.90);
+    $bolster = new Kennels('Bolster', 'Piccola', 59.90, 894758374859238);
     $bolster->poster = 'img/71VnSdG+rxL._AC_SX425_.jpg';
     $allProducts[] = $bolster;
 

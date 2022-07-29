@@ -48,10 +48,14 @@
                     </div>
 
                     <div class="info-product">
+
+                        <!-- Product Name -->
                         <div class="name">
                             <span>Nome:</span> 
                             <?php echo $product->name; ?>
                         </div>
+
+                        <!-- Size -->
                         <div class="size">
                             <span>Prodotto consigliato per taglia: </span>
                             <?php echo $product->size; ?>
@@ -64,9 +68,17 @@
                                 <?php echo "$product->weightProduct Kg"; ?>
                             </div>
                         <?php } ?>
+
+                        <!-- Price -->
                         <div class="price">
                             <span>Prezzo: </span>
                             <?php echo "$product->price &euro;"; ?>
+                        </div>
+
+                        <!-- Barcode -->
+                        <div class="barcode">
+                            <span>Codice: </span>
+                            <?php echo $product->barCode; ?>
                         </div>
                     </div>
                 </li>
