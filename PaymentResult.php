@@ -19,23 +19,23 @@
         </div>
         <!-- Payment Result -->
         <div class="payment-result">
-            <?php 
-                $Lisa_Zhou->paymentResult($Lisa_Zhou->balace);
-                if($Lisa_Zhou->paymentResult($Lisa_Zhou->balace) === 'ok') {
-                    echo "Grazie per aver effettuato l'acquisto.";
-                };
-            ?>
-        </div>
-        <!-- Total Payment -->
-        <div class="total-payment">
-            <span>
-                Il totale pagato è di: <?php echo $Lisa_Zhou->getCartSum(); ?> &euro;
-            </span>
+            <?php $Lisa_Zhou->paymentResult($creditCardDetails); ?>
+            <?php if($Lisa_Zhou->paymentResult($creditCardDetails) === 'ok') { ?>
+                
+                <?php echo "Grazie per aver effettuato l'acquisto."; ?>
+
+                <!-- Total Payment -->
+                <div class="total-payment">
+                    <span>
+                        Il totale pagato è di: <?php echo $Lisa_Zhou->getCartSum(); ?> &euro;
+                    </span>
+                </div>
+            <?php }; ?>
         </div>
     </div>
 
     <!-- Anonymouse -->
-    <div class="anonymous">
+    <!-- <div class="anonymous">
         <div>
         <span> Ciao!</span>
         </div>
@@ -46,15 +46,15 @@
                     echo "Grazie per aver effettuato l'acquisto";
                 };    
             ?>
-        </div>
+        </div> -->
 
         <!-- Total Payment -->
-        <div class="total-payment">
+        <!-- <div class="total-payment">
             <span>
                 Il totale pagato è di: <?php echo $anonymous->getCartSum(); ?> &euro;
             </span>
         </div>
-    </div>
+    </div> -->
 
 
 

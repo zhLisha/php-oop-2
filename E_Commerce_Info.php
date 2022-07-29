@@ -35,7 +35,7 @@
     $Lisa_Zhou->moveToCart($bolster);
 
     // Credit Balance
-    $Lisa_Zhou->balace = 90;
+    $creditCardDetails = new CreditCard('Lisa Zhou', 456663458374657, '2/28', 756);
 
 
     
@@ -44,6 +44,6 @@
     $anonymous->moveToCart($julius_K9);
 
     // Credit Balance
-    $anonymous->balace = 20;
+    // $anonymous->balace = 20;
 
 ?>

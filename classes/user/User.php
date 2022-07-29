@@ -1,7 +1,5 @@
-<?php 
-require_once __DIR__ . '/CreditCard.php';
-
-    class User extends CreditCard{
+<?php
+    class User{
         public $name;
         public $email;
         protected $discount = 0;
@@ -31,9 +29,9 @@ require_once __DIR__ . '/CreditCard.php';
         public function paymentResult($credit) {
             $totalPrice = $this->getCartSum();
 
-            $totalBalance = $credit;
+            $totalBalance = $credit->balance;
             
-            if($credit < $totalPrice) {
+            if($credit->balance < $totalPrice) {
                 die('Saldo non disponibile');
             } else {
                 return 'ok';

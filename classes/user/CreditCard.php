@@ -1,6 +1,17 @@
 <?php
 
     class CreditCard{
-        public $balace = 0;
+        public $nameOwner;
+        public $number;
+        public $expiration;
+        public $cvv;
+        public $balance = 90;
+
+        public function __construct($_nameOwner, $_number, $_expiration, $_cvv) {
+            $this->nameOwner = $_nameOwner;
+            $this->number = $_number;
+            $this->expiration = $_expiration;
+            $this->cvv = $_cvv;
+        }
     }
 ?>
